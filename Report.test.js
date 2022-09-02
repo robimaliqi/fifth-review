@@ -19,8 +19,13 @@ describe("report", () => {
     });
     it("returns the number of times two scores are input", () => {
       const report = new Report();
-      report.addScores("Amber Amber");
+      report.addScores("Amber, Amber");
       expect(report.generate()).toEqual("Test 1:\nAmber: 2");
+    });
+    it("returns the number of times two scores are input", () => {
+      const report = new Report();
+      report.addScores("Amber, Red");
+      expect(report.generate()).toEqual("Test 1:\nAmber: 1\nRed: 1");
     });
   });
 });
