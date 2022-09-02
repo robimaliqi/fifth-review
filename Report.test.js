@@ -5,7 +5,12 @@ describe("report", () => {
     it("returns the number of times a score is input", () => {
       const report = new Report();
       report.addScores("Green");
-      expect(report.generate()).toEqual("Green: 1");
+      expect(report.generate()).toEqual("Test 1:\nGreen: 1");
+    });
+    it("returns the number of times a score is input", () => {
+      const report = new Report();
+      report.addScores("Red");
+      expect(report.generate()).toEqual("Test 1:\nRed: 1");
     });
   });
 });

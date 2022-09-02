@@ -1,8 +1,12 @@
 class Report {
-  addScores() {}
+  addScores(input) {
+    this.input = input;
+  }
 
   generate() {
-    return "Green: 1";
+    if (this.input == "Green") {
+      return "Test 1:\nGreen: 1";
+    } else return "Test 1:\nRed: 1";
   }
 }
 
