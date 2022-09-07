@@ -4,11 +4,12 @@ class Report {
   }
 
   generate() {
-    return `Test 1:\n${this.input.split(" ")[0].replace(",", "")}: ${
-      this.input.split(" ").length
-    }`;
+    const element = this.input.split(" ");
+    console.log(element);
+    return `Test 1:\n${element[0].replace(",", "")}: ${element.length}`;
   }
 }
+
 module.exports = Report;
 
 // } else if (this.input == "Amber") {
