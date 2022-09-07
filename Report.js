@@ -4,11 +4,9 @@ class Report {
   }
 
   generate() {
-    if (this.input === "Amber, Amber" || this.input == "Red, Red") {
-      return `Test 1:\n${this.input.split(" ")[0].replace(",", "")}: 2`;
-    } else {
-      return `Test 1:\n${this.input}: 1`;
-    }
+    return `Test 1:\n${this.input.split(" ")[0].replace(",", "")}: ${
+      this.input.split(" ").length
+    }`;
   }
 }
 module.exports = Report;

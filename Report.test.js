@@ -31,5 +31,11 @@ describe("report", () => {
       report.addScores("Red, Red");
       expect(report.generate()).toEqual("Test 1:\nRed: 2");
     });
+
+    it("returns the number of times two scores are input", () => {
+      const report = new Report();
+      report.addScores("Red, Red, Red");
+      expect(report.generate()).toEqual("Test 1:\nRed: 3");
+    });
   });
 });
